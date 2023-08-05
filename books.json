@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "title": "Aadujeevitham",
+    "author": "Benyamin",
+    "genre": "non-fiction",
+    "publishedYear": 2008
+  },
+  {
+    "id": 2,
+    "title": "Loljeevitham",
+    "author": "Benyamin",
+    "genre": "non-fiction",
+    "publishedYear": 2009
+  },
+  {
+    "id": 3,
+    "title": "Aadujeevitham",
+    "author": "Benyamin",
+    "genre": "non-fiction",
+    "publishedYear": 2008
+  },
+  {
+    "id": 4,
+    "title": "Loljeevitham",
+    "author": "Benyamin",
+    "genre": "non-fiction",
+    "publishedYear": 2009
+  },
+  {
+    "id": 5,
+    "title": "oopsjeevitham",
+    "author": "Benyamin",
+    "genre": "non-fiction"
+  }
+]
