@@ -20,7 +20,6 @@ function readDataFromFile() {
   try {
     const data = fs.readFileSync(booksFile, 'utf-8');
     books = JSON.parse(data);
-    updateBookIdCounter(); // Update the ID counter after reading data
   } catch (err) {
     if (err.code === 'ENOENT') {
       // If the file doesn't exist, it means no books yet, so initialize the 'books' array as empty
@@ -59,12 +58,27 @@ function addBook(title, author, genre, publishedYear) {
   saveBooksToFile(); // Save the updated 'books' array to file
 }
 
+// Function to update books
+function updateBook(id, updatedBook) {
+  const index = books.findIndex(book => book.id === id);
+  if (index !== -1) {
+    books[index] = updatedBook;
+  }
+}
+
 // Read existing data from the file when the application starts
 readDataFromFile();
 
 // Example usage
-addBook('oopsjeevitham', 'Benyamin', 'non-fiction');
+//addBook('oopsjeevitham', 'Benyamin', 'non-fiction');
+const updatedBook = {
+  id: 2, // Replace with the actual ID of the book you want to update
+  title: 'Oh no',
+  author: 'Updated Book Author',
+  genre: 'Updated Book Genre',
+  publishedYear: 2023 // Updated Published Year
+};
 
-
+updateBook(2, updatedBook);
 
 showBooks();
