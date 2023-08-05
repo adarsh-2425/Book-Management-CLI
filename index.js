@@ -63,6 +63,7 @@ function updateBook(id, updatedBook) {
   const index = books.findIndex(book => book.id === id);
   if (index !== -1) {
     books[index] = updatedBook;
+    saveBooksToFile();
   }
 }
 
@@ -72,13 +73,20 @@ readDataFromFile();
 // Example usage
 //addBook('oopsjeevitham', 'Benyamin', 'non-fiction');
 const updatedBook = {
-  id: 2, // Replace with the actual ID of the book you want to update
+  id: 3, // Replace with the actual ID of the book you want to update
   title: 'Oh no',
   author: 'Updated Book Author',
   genre: 'Updated Book Genre',
   publishedYear: 2023 // Updated Published Year
 };
 
-updateBook(2, updatedBook);
+// Function to delete book
+function deleteBook(id) {
+  books = books.filter(book => book.id !== id);
+  saveBooksToFile();
+  console.log('book deleted');
+}
+
+deleteBook(5);
 
 showBooks();
