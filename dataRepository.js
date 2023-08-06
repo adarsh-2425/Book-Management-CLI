@@ -27,7 +27,6 @@ function saveDataToFile() {
   try {
     const jsonData = JSON.stringify(books, null, 2);
     fs.writeFileSync(booksFile, jsonData, 'utf-8');
-    console.log('Book collection saved to file');
   } catch (err) {
     console.error('Error saving books');
   }
