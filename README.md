@@ -20,8 +20,10 @@ Book Management CLI is a simple Command Line Interface (CLI) application for man
 
 2. Install the dependencies:
 
+```
 cd Book-Management-CLI
 npm install
+```
 
 
 3. Run the CLI application:
