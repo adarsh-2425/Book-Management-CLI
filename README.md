@@ -28,8 +28,9 @@ npm install
 
 3. Run the CLI application:
 
+```
 npm start
-
+```
 
 ## Usage
 
